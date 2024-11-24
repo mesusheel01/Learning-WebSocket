@@ -9,7 +9,7 @@ wss.on("connection", function(socket){
     console.log("user connected")
     // other user when connected
     socket.on("message", (e)=>{
-        if(e.toString())
-            socket.send(e.toString())
+        if(e.toString() ==='ping')
+            socket.send("pong")
     })
 })
